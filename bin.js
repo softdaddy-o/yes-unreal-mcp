@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 const path = require('path');
 
 // Find the tsx executable
-const tsxPath = require.resolve('tsx/bin/tsx');
+const tsxPath = require.resolve('tsx/dist/cli.mjs');
 const binPath = path.join(__dirname, 'server', 'bin.ts');
 
 // Run the TypeScript file with tsx
