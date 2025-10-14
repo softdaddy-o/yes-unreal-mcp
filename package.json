@@ -4,7 +4,7 @@
   "description": "MCP server for Unreal Engine using Unreal Python Remote Execution",
   "main": "dist/index.js",
   "bin": {
-    "unreal-mcp": "dist/bin.js"
+    "yes-unreal-mcp": "dist/bin.js"
   },
   "scripts": {
     "dev": "tsx --watch server/bin.ts",
