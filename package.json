@@ -4,7 +4,7 @@
   "description": "MCP server for Unreal Engine using Unreal Python Remote Execution",
   "main": "dist/index.js",
   "bin": {
-    "yes-unreal-mcp": "dist/bin.js"
+    "yes-unreal-mcp": "server/bin.ts"
   },
   "scripts": {
     "dev": "tsx --watch server/bin.ts",
@@ -13,7 +13,7 @@
     "postbuild": "node dist/scripts/make-executable.js && node dist/scripts/update-readme.js",
     "fmt": "pnpm biome format . --write && pnpm biome check --formatter-enabled=false --linter-enabled=false --organize-imports-enabled=true --write"
   },
-  "files": ["dist"],
+  "files": ["server", "dist"],
   "keywords": ["unreal", "mcp", "modelcontextprotocol", "unreal-mcp"],
   "author": "RUNREAL runreal.dev",
   "license": "MIT",
@@ -21,7 +21,8 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "unreal-remote-execution": "^1.0.0",
-    "zod": "^3.25.48"
+    "zod": "^3.25.48",
+    "tsx": "^4.7.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
